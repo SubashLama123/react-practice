@@ -1,13 +1,8 @@
-import { configureStore } from "@reduxjs/toolkit";
-
-
-
+import { configureStore } from '@reduxjs/toolkit';
+import notesReducer from '../features/notes/notesSlice';
 
 export const store = configureStore({
   reducer: {
-    productApi: productApi.reducer
-
+    notes: notesReducer,
   },
-
-
 });
