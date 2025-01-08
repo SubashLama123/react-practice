@@ -1,8 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
-import notesReducer from '../features/notes/notesSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import taskReducer from "../features/tasks/tasksSlice";
 
-export const store = configureStore({
+const store = configureStore({
   reducer: {
-    notes: notesReducer,
+    tasks: taskReducer, // Register the `tasks` slice reducer
   },
 });
+
+export default store;
